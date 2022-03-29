@@ -1,0 +1,110 @@
+/* Custom Properties */
+/* & */
+/* Global Resets */
+* {
+  --mainColour: #343a40;
+  --mainColour1: #868e96;
+  --mainColour2: #dee2e6;
+  --secondaryColour: #51cf66;
+  --secondaryColour1: #37b24d;
+  --secondaryColour2: #2b8a3e;
+  --boxShadow: 0 3px 15px rgba(0, 0, 0, 0.2)
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  font-family: "M PLUS 1 Code", sans-serif;
+  background-color: var(--mainColour);
+  color: var(--secondaryColour);
+  font-size: 1.1rem;
+  transition: all 0.4s ease-in-out;
+}
+
+a {
+  display: inline-block;
+  font-family: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Layout Styles */
+header {
+  height: 100vh;
+  overflow: hidden;
+  color: var(--secondaryColour);
+}
+
+section {
+  min-height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 3rem 18rem;
+}
+
+.section {
+  transform: translateY(-100%) scale(0);
+  transition: all 0.4s ease-in-out;
+  background-color: var(--mainColour);
+}
+
+.section-1 {
+  display: none;
+  transform: translateY(0) scale(1);
+}
+
+.section-2 {
+  display: none;
+  transform: translateY(0) scale(1);
+}
+
+.section-3 {
+  display: none;
+  transform: translateY(0) scale(1);
+}
+
+.section-4 {
+  display: none;
+  transform: translateY(0) scale(1);
+}
+
+.section-5 {
+  display: none;
+  transform: translateY(0) scale(1);
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 10;
+  top: 50%;
+  right: 3%;
+  transform: translateY(-50%);
+}
+
+.control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  cursor: pointer;
+  background-color: var(--mainColour1);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin: 0.7rem 0;
+  box-shadow: var(--boxShadow);
+}
+
+.icon {
+    font-size: 1.2rem;
+    pointer-events: none;
+}
