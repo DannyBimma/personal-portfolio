@@ -55,26 +55,31 @@ section {
 .section-1 {
   display: none;
   transform: translateY(0) scale(1);
+  background-color: red;
 }
 
 .section-2 {
   display: none;
   transform: translateY(0) scale(1);
+  background-color: orange;
 }
 
 .section-3 {
   display: none;
   transform: translateY(0) scale(1);
+  background-color: lawngreen;
 }
 
 .section-4 {
   display: none;
   transform: translateY(0) scale(1);
+  background-color: slateblue;
 }
 
 .section-5 {
   display: none;
   transform: translateY(0) scale(1);
+  background-color: darkmagenta
 }
 
 /* Controls */
@@ -110,6 +115,21 @@ section {
 }
 
 /* Utility Styles */
+.active {
+  display: block;
+  animation: scaleAnim 1s ease-in-out;
+}
+
+@keyframes scaleAnim {
+  0% {
+    transform: translateY(-100%) scaleY(0);
+  }
+  100% {
+    transform: translateY(0) scaleY(1);
+  }
+  
+}
+
 .active-btn {
   background-color: var(--secondaryColour2);
   color: var(--mainColour2);
