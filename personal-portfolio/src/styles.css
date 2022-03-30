@@ -55,31 +55,26 @@ section {
 .section-1 {
   display: none;
   transform: translateY(0) scale(1);
-  background-color: red;
 }
 
 .section-2 {
   display: none;
   transform: translateY(0) scale(1);
-  background-color: orange;
 }
 
 .section-3 {
   display: none;
   transform: translateY(0) scale(1);
-  background-color: lawngreen;
 }
 
 .section-4 {
   display: none;
   transform: translateY(0) scale(1);
-  background-color: slateblue;
 }
 
 .section-5 {
   display: none;
   transform: translateY(0) scale(1);
-  background-color: darkmagenta
 }
 
 /* Controls */
@@ -133,4 +128,94 @@ section {
 .active-btn {
   background-color: var(--secondaryColour2);
   color: var(--mainColour2);
+}
+
+/* Content Styles */
+.header-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 100%;
+}
+
+.left-header {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.h-shape {
+  transition: all 0.4s ease-in-out;
+  width: 65%;
+  height: 100%;
+  background-color: var(--secondaryColour2);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  clip-path: polygon(0 0, 34% 5%, 100% 100%, 0% 100%);
+}
+
+.image {
+  border-radius: 50%;
+  height: 90%;
+  width: 68%;
+  margin-left: 4rem;
+  background-color: #383333;
+  transition: all 0.4s ease-in-out;
+}
+
+.image:img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.4s ease-in-out;
+  filter: grayscale(100%);
+}
+
+.image:hover {
+  filter: grayscale(0);
+}
+
+.right-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 18rem;
+}
+
+.right-header:p {
+  margin: 1.5rem 0;
+  line-height: 2rem;
+}
+
+/* Component Styles */
+.btn-container {
+  display: flex;
+  align-self: flex-start;
+}
+.main-btn{
+  /* display: flex; */
+  /* align-self: flex-start; */
+  /* align-items: center; */
+  border-radius: 15px;
+  color: inherit;
+  font-weight: 600;
+  position: relative;
+  border: 1px solid var(--secondaryColour2);
+  overflow: hidden;
+  padding: 0.5rem 0;
+  padding-left: 0.1rem;
+}
+
+/* .btn-text {
+  padding: 0 2rem;
+} */
+
+.btn-icon {
+  background-color: var(--secondaryColour2);
+  color: var(--mainColour2);
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  padding: 1rem;
 }
