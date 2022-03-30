@@ -108,3 +108,9 @@ section {
     font-size: 1.2rem;
     pointer-events: none;
 }
+
+/* Utility Styles */
+.active-btn {
+  background-color: var(--secondaryColour2);
+  color: var(--mainColour2);
+}
